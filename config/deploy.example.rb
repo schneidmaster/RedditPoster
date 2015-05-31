@@ -4,6 +4,17 @@ set :scm, :copy
 
 set :deploy_to, '/some/server/path'
 
+set :include_dir, [
+  '.env',
+  'bot.rb',
+  'Gemfile',
+  'Gemfile.lock',
+  'LICENSE.txt',
+  'post.rb',
+  'config/schedule.rb',
+  'posts/*.md'
+]
+
 namespace :deploy do
   after :deploy, :update_cron do
     on roles(:app) do
