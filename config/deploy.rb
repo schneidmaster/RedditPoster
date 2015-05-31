@@ -2,8 +2,6 @@ set :application, 'RedditPoster'
 
 set :scm, :copy
 
-set :deploy_to, '/some/server/path'
-
 set :include_dir, [
   '.env',
   'bot.rb',

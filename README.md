@@ -16,9 +16,9 @@ A Reddit bot to make scheduled subreddit posts, implemented in Ruby.
 
 To make it easier to deploy changes, RedditPoster includes a Capistrano deployment recipe. This lets you edit your post messages and schedule on your computer and then automatically deploy, bundle, and update the cron file. To use Capistrano:
 
-1. Copy `production.example.rb` to `production.rb` and fill in your server's IP address and SSH user.
-2. Copy `deploy.example.rb` to `deploy.rb` and fill in the path where you want RedditPoster to live on your server.
-3. Make any updates to your post texts and schedule, then run `cap production deploy` to deploy the changes.
+1. Clone the bot onto your computer and run `bundle` to install dependencies.
+2. Copy `production.example.rb` to `production.rb` and fill in your server's IP address, SSH user, and the path where you want RedditPoster to live on your server.
+3. Make any updates to your post texts and schedule (see above), then run `cap production deploy` to deploy the changes.
 
 ## A note on timezones
 
