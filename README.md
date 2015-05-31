@@ -9,7 +9,7 @@ A Reddit bot to make scheduled subreddit posts, implemented in Ruby.
 3. Run `bundle` to install the required gems.
 4. Copy `.env.example` to `.env` and fill it in with your bot's username, password, and subreddit to post in. 
 5. Copy `schedule.example.rb` to `schedule.rb` and fill it in with each scheduled post you'd like the bot to make. 
-6. For each post, create a corresponding markdown file in the `posts/` folder with the post text. For example, if you create a Saturday post like `runner "Bot.post!('Saturday Thread', 'saturday')"`, you would create `posts/saturday.md` with the post text. You can use [Reddit's flavor of markdown](https://www.reddit.com/r/reddit.com/comments/6ewgt/reddit_markdown_primer_or_how_do_you_do_all_that/c03nik6) in post content.
+6. For each post, create a corresponding markdown file in the `posts/` folder with the post text. For example, if you create a Saturday post like `make :post, title: 'Saturday Thread', name: 'saturday'`, you would create `posts/saturday.md` with the post text. You can use [Reddit's flavor of markdown](https://www.reddit.com/r/reddit.com/comments/6ewgt/reddit_markdown_primer_or_how_do_you_do_all_that/c03nik6) in post content.
 7. Run `bundle exec whenever -w` to write your schedule to your server's cron file. (Repeat this command if you ever update the post schedule.)
 
 ## Capistrano Deployment
