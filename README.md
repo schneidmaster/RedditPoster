@@ -20,6 +20,10 @@ To make it easier to deploy changes, RedditPoster includes a Capistrano deployme
 2. Copy `deploy.example.rb` to `deploy.rb` and fill in the path where you want RedditPoster to live on your server.
 3. Make any updates to your post texts and schedule, then run `cap production deploy` to deploy the changes.
 
+## A note on timezones
+
+Cron will by default use your server's timezone to determine when to run tasks. You can set this with `sudo dpkg-reconfigure tzdata`; also, remember to run `sudo service cron restart` after altering the timezone.
+
 ## Contributing
 
 1. Fork it ( https://github.com/schneidmaster/RedditPoster/fork )
