@@ -11,10 +11,10 @@ job_type :make, 'cd :path && ruby post.rb ":title" :name :append_date :distingui
 
 # Post on some day of the week.
 every :saturday, at: '12pm' do
-  make :post, { title: 'Saturday Thread', name: 'saturday', append_date: true, distinguish: true }
+  make :post, title: 'Saturday Thread', name: 'saturday', append_date: true, distinguish: true
 end
 
 # Post every day of the week
 every :day, at: '12pm' do
-  make :post, { title: 'Daily Thread', name: 'daily', append_date: true, distinguish: true }
+  make :post, title: 'Daily Thread', name: 'daily', append_date: true, distinguish: true
 end
