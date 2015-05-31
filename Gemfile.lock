@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    chronic (0.10.2)
+    dotenv (2.0.1)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    htmlentities (4.3.3)
+    multi_json (1.11.0)
+    multipart-post (2.0.0)
+    redditkit (1.0.2)
+      faraday (~> 0.8)
+      htmlentities (~> 4.3)
+      multi_json (~> 1.8)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv (~> 2.0.1)
+  redditkit (~> 1.0.1)
+  whenever (~> 0.9.4)
