@@ -1,3 +1,5 @@
 .env
 config/schedule.rb
+config/deploy.rb
+config/deploy/production.rb
 posts/*.md
