@@ -18,10 +18,10 @@ class Bot
       client = call_guarantee { RedditKit::Client.new ENV['ACCOUNT_USERNAME'], ENV['ACCOUNT_PASSWORD'] }
 
       # Submit the link
-      call_guarantee { client.submit title, ENV['SUBREDDIT'], { text: content } }
+      call_guarantee { client.submit title, ENV['SUBREDDIT'], text: content }
 
       # Find the link
-      link =  call_guarantee { client.links(ENV['SUBREDDIT'], { category: :new }).select{ |l| l.author == ENV['ACCOUNT_USERNAME'] }.first }
+      link =  call_guarantee { client.links(ENV['SUBREDDIT'], category: :new).find { |l| l.author == ENV['ACCOUNT_USERNAME'] } }
 
       # Distinguish the link
       call_guarantee { client.distinguish "t3_#{link.id}" } if options[:distinguish]
@@ -38,7 +38,7 @@ class Bot
 
     def call_guarantee
       return nil unless block_given?
-      while true do
+      loop do
         begin
           return yield
         rescue
